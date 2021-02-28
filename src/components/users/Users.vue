@@ -158,9 +158,6 @@ export default {
   computed: {
     title () {
       return this.addForm.id ? '编辑用户' : '新增用户'
-    },
-    show () {
-      return !this.addForm.id
     }
   },
   methods: {
@@ -176,7 +173,6 @@ export default {
     // 监听修改按钮点击事件
     async showEditDialog (id) {
       const { data: res } = await this.$http.get(`users/${id}`)
-      console.log(res)
       if (res.meta.status !== 200) return this.$message.error('获取用户信息失败')
       this.addForm = res.data
       this.addDialogVisible = true
@@ -193,7 +189,6 @@ export default {
         this.$message.info('取消删除')
       } else {
         const { data: res } = await this.$http.delete(`users/${id}`)
-        console.log(res)
         if (res.meta.status !== 200) return this.$message.error('删除用户失败')
         this.$message.success('删除用户成功')
         this.getUserList()
@@ -233,11 +228,9 @@ export default {
         // 通过有无ID判断是新增还是修改
         if (!this.addForm.id) {
           const { data: res } = await this.$http.post('users', this.addForm)
-          console.log(res)
           if (res.meta.status !== 201) return this.$message.error('创建用户失败')
         } else {
           const { data: res } = await this.$http.put(`users/${this.addForm.id}`, this.addForm)
-          console.log(res)
           if (res.meta.status !== 200) return this.$message.error('编辑用户失败')
         }
         this.addDialogVisible = false
