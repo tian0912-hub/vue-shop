@@ -1,60 +1,83 @@
 import Vue from 'vue'
-import {
-  Button,
+import { Button,
   Form,
   FormItem,
   Input,
   Message,
-  Header,
   Container,
-  Aside,
-  Main,
+  Aside, Main,
+  Header,
+  Row,
+  Col,
   Menu,
-  MenuItem,
   Submenu,
+  MenuItem,
+  MenuItemGroup,
   Breadcrumb,
   BreadcrumbItem,
   Card,
-  Row,
-  Col,
   Table,
   TableColumn,
-  Tooltip,
   Switch,
+  Tooltip,
   Pagination,
   Dialog,
   MessageBox,
   Tag,
   Tree,
   Select,
-  Option
+  Option,
+  Cascader,
+  Alert,
+  Tabs,
+  TabPane,
+  Steps,
+  Step,
+  Checkbox,
+  CheckboxGroup,
+  Upload,
+  Timeline,
+  TimelineItem
 } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
-Vue.use(Header)
 Vue.use(Container)
 Vue.use(Aside)
 Vue.use(Main)
+Vue.use(Header)
+Vue.use(Row)
+Vue.use(Col)
 Vue.use(Menu)
-Vue.use(MenuItem)
 Vue.use(Submenu)
+Vue.use(MenuItem)
+Vue.use(MenuItemGroup)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
 Vue.use(Card)
-Vue.use(Row)
-Vue.use(Col)
 Vue.use(Table)
 Vue.use(TableColumn)
-Vue.use(Tooltip)
 Vue.use(Switch)
+Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Upload)
+Vue.use(Timeline)
+Vue.use(TimelineItem)
+
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
